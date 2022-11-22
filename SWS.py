@@ -80,6 +80,7 @@ time.sleep(2)
 mengetik(f"{H}____________________________________________")
 time.sleep(2)
 print("")
+print("")
 
 k = 0
 nomer = input(f"{O} ∎--> Nomer Target : ")
@@ -193,4 +194,4 @@ for k in range(jumlah):
     print(f"{M}--> SPAM WA CARSOME GAGAL",k)
     time.sleep(5)
 os.system("clear")
-os.system("python SmW.py")
+os.system("python SWS.py")
