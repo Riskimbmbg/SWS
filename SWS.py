@@ -101,7 +101,7 @@ headers_qoala = {
 'Host': 'api.qoala.app',
 'content-length': '207',
 'accept': 'application/json, text/plain, */*',
-'user-agent': 'Mozilla/5.0 (Linux; Android 10; Redmi 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36',
+'user-agent': 'Mozilla/5.0 (Linux; Android 11; Redmi 9T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36',
 'content-type': 'application/json;charset=UTF-8',
 'origin': 'https://www.qoala.app',
 'sec-fetch-site': 'same-site',
