@@ -101,15 +101,16 @@ headers_eci = {
 "Accept-Encoding" : "gzip, deflate, br",
 "Accept-Language" : "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 headers_qoala = {
-'Host': 'api.qoala.app',
-'content-length': '207',
+'Host': 'api.qoalaplus.com',
+'content-length': '17',
 'accept': 'application/json, text/plain, */*',
 'user-agent': 'Mozilla/5.0 (Linux; Android 10; Redmi 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36',
-'content-type': 'application/json;charset=UTF-8',
-'origin': 'https://www.qoala.app',
+'content-type': 'application/json',
+'origin': 'https://www.qoalaplus.com',
 'sec-fetch-site': 'same-site',
-'sec-fetch-mode': 'cors',                                                                                                                               'sec-fetch-dest': 'empty',
-'referer': 'https://www.qoala.app/',
+'sec-fetch-mode': 'cors',
+'sec-fetch-dest': 'empty',
+'referer': 'https://www.qoalaplus.com/',
 'accept-encoding': 'gzip, deflate, br',
 'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
 headers_sayur = {
@@ -147,7 +148,7 @@ headers_carsome = {
 'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
 # Data
 data_eci = json.dumps({"identity":"0"+nomer})
-data_qoala = json.dumps({"fullName":"Khoirul Anam","email":"ubayganteng618@gmail.com","phoneNumber":"+62"+nomer,"identityType":"KTP","nationality":"ID","password":"anam12345@A","passwordConfirmation":"anam12345@A","lang":"id"})
+data_qoala = json.dumps({"channel":nomer})
 data_sayur = json.dumps([{"operationName":"generateOTP","variables":{"destinationType":"whatsapp","identity":"+62"+nomer},"query":"mutation generateOTP($destinationType: String!, $identity: String!) {\n  generateOTP(destinationType: $destinationType, identity: $identity) {\n    id\n    __typename\n  }\n}"}])
 data_carsome = json.dumps({"username":nomer,"optType":1})
 
