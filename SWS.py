@@ -9,7 +9,7 @@ def mengetik(c):
        for e in c + "\n":
           sys.stdout.write(e)
           sys.stdout.flush()
-          time.sleep(0.03)
+          time.sleep(0.01)
 
 #warna liat
 P = '\x1b[1;97m' # PUTIH
@@ -197,6 +197,6 @@ for k in range(jumlah):
     time.sleep(3)
     print(f"{H}____________________________________________")
     print(f"{M}--> SPAM WA CARSOME GAGAL",k)
-    time.sleep(5)
+    time.sleep(7)
 os.system("clear")
 os.system("python SWS.py")
