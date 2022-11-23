@@ -23,7 +23,8 @@ N = '\x1b[0m'    # WARNA MATI
 
 # program
 os.system( 'clear' )
-mengetik(f"{B}SUBCRIBE DULU CHANEL GUA BRO..")
+mengetik(f"{K}WELCOM TO MY SCRIPT"
+mengetik(f"{M}SUBCRIBE DULU CHANEL GUA BRO..")
 time.sleep(3)
 os.system( 'clear' )
 os.system("xdg-open https://youtube.com/@riskimbmbg276")
@@ -95,7 +96,7 @@ headers_eci = {
 "Content-Length" : "27",
 "Accept" : "application/json, text/plain, */*",
 "Origin" : "https://eci.id",
-"User-Agent" : "Mozilla/5.0 (Linux; Android 7.1.2; Redmi 5A Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.158 Mobile Safari/537.36",
+"User-Agent" : "Mozilla/5.0 (Linux; Android 12.5.9; Redmi 9T Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.158 Mobile Safari/537.36",
 "Content-Type" : "application/json",
 "Referer" : "https://eci.id/register",
 "Accept-Encoding" : "gzip, deflate, br",
