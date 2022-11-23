@@ -23,7 +23,7 @@ N = '\x1b[0m'    # WARNA MATI
 
 # program
 os.system( 'clear' )
-mengetik(f"{K}WELCOM TO MY SCRIPT")
+mengetik(f"{K}•••WELCOM TO MY SCRIPT•••")
 mengetik(f"{M}SUBCRIBE DULU CHANEL GUA BRO..")
 time.sleep(3)
 os.system( 'clear' )
