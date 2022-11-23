@@ -25,7 +25,7 @@ N = '\x1b[0m'    # WARNA MATI
 os.system( 'clear' )
 mengetik(f"{M}################################################")
 mengetik(f"{K}         •••••WELCOME TO MY SCRIPT•••••")
-mengetik(f"{O}     •••••SUBCRIBE DULU CHANEL GUA BRO•••••")
+mengetik(f"{K}     •••••SUBCRIBE DULU CHANEL GUA BRO•••••")
 mengetik(f"{M}################################################")
 time.sleep(3)
 os.system( 'clear' )
