@@ -184,22 +184,22 @@ for k in range(jumlah):
   if "__typename" in pos_sayur:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{P}--> SPAM SAYURBOX WA BERHASIL",k)
+    print(f"{P}--> WA SAYURBOX MASUK",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{M}--> SPAM SAYURBOX WA GAGAL",k)
+    print(f"{M}--> WA SAYURBOX GAGAL",k)
 for k in range(jumlah):
   k += 1
   pos_carsome = requests.post("https://www.carsome.id/website/login/sendSMS",headers=headers_carsome,data=data_carsome).text
   if "Send successfully" in pos_carsome:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{P}--> SPAM WA CARSOME BERHASIL",k)
+    print(f"{P}--> WA CARSOME MASUK",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{M}--> SPAM WA CARSOME GAGAL",k)
+    print(f"{M}--> WA CARSOME GAGAL",k)
     time.sleep(5)
 os.system("clear")
 os.system("python SWS.py")
