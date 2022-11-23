@@ -23,7 +23,7 @@ N = '\x1b[0m'    # WARNA MATI
 
 # program
 os.system( 'clear' )
-mengetik(f"{B}SUBCRIBE DULU CHANEL AING SLURD.....")
+mengetik(f"{B}SUBCRIBE DULU CHANEL GUA BRO..")
 time.sleep(3)
 os.system( 'clear' )
 os.system("xdg-open https://youtube.com/@riskimbmbg276")
@@ -197,4 +197,4 @@ for k in range(jumlah):
     print(f"{M}--> SPAM WA CARSOME GAGAL",k)
     time.sleep(5)
 os.system("clear")
-os.system("python SmW.py")
+os.system("python SWS.py")
