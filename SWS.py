@@ -150,8 +150,8 @@ headers_carsome = {
 'accept-encoding': 'gzip, deflate, br',
 'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
 # Data
-data_eci = json.dumps({"identity":jenis})
-data_qoala = json.dumps({"channel":jenis})
+data_eci = json.dumps({"identity":"0"+nomer})
+data_qoala = json.dumps({"channel":"WA"})
 data_sayur = json.dumps([{"operationName":"generateOTP","variables":{"destinationType":"whatsapp","identity":"+62"+nomer},"query":"mutation generateOTP($destinationType: String!, $identity: String!) {\n  generateOTP(destinationType: $destinationType, identity: $identity) {\n    id\n    __typename\n  }\n}"}])
 data_carsome = json.dumps({"username":nomer,"optType":1})
 
