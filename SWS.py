@@ -9,7 +9,7 @@ def mengetik(c):
        for e in c + "\n":
           sys.stdout.write(e)
           sys.stdout.flush()
-          time.sleep(0.03)
+          time.sleep(0.01)
 
 #warna liat
 P = '\x1b[1;97m' # PUTIH
@@ -23,8 +23,10 @@ N = '\x1b[0m'    # WARNA MATI
 
 # program
 os.system( 'clear' )
-mengetik(f"{K}WELCOME TO MY SCRIPT")
-mengetik(f"{M}SUBCRIBE DULU CHANEL GUA BRO..")
+mengetik(f"{M}################################################")
+mengetik(f"{K}         •••••WELCOME TO MY SCRIPT•••••")
+mengetik(f"{K}     •••••SUBCRIBE DULU CHANEL GUA BRO•••••")
+mengetik(f"{M}################################################")
 time.sleep(3)
 os.system( 'clear' )
 os.system("xdg-open https://youtube.com/@riskimbmbg276")
@@ -55,7 +57,7 @@ mengetik(f"{H} ∎∎∎∎∎∎  L  ∎∎∎∎∎∎∎∎∎∎  ∎∎∎�
 mengetik(f"{H} ∎∎∎∎∎∎∎     ∎∎∎∎∎∎∎∎∎       ∎∎∎       ∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎  B  ∎∎∎∎∎∎∎∎  ∎  ∎∎∎∎∎∎∎∎∎  ∎∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎∎  A  ∎∎∎∎∎∎∎  ∎∎  ∎∎∎∎∎∎  ∎∎∎∎∎∎∎∎∎")
-mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎  H  ∎∎∎∎∎∎  ∎∎∎  ∎∎∎      ∎∎∎∎∎∎∎")
+mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎  H  ∎∎∎∎∎∎  ∎∎∎  ∎∎∎       ∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎∎  A  ∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎")
 mengetik(f"{H} ∎∎∎∎∎∎∎∎∎∎∎∎  N  ∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎∎")
 print("")
@@ -78,7 +80,7 @@ mengetik(f"{H}          SCRIPT SPAM WA + SMS 2022")
 print("")
 mengetik(f"{H}____________________________________________")
 print("")
-mengetik(f"{P} [✓] Contoh Nomer Wa 8123456789")
+mengetik(f"{U} [✓] Contoh Nomer Wa 8123456789")
 mengetik(f"{M} [✘] Dilarang Menggunakan +62/08/62")
 time.sleep(2)
 mengetik(f"{H}____________________________________________")
@@ -87,10 +89,8 @@ print("")
 
 k = 0
 user = random.choice(["Mozilla/5.0 (Linux; Android 11; KB2001 Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.105 Mobile Safari/537.36","Mozilla/5.0 (Linux; Android 10; CLT-L29 Build/HUAWEICLT-L29; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/87.0.4280.101 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/321.0.0.37.119;]"])
-nomer = input(f"{O} ∎--> Nomer Target : ")
-jumlah = int(input(f"{O} ∎--> Spam Yang Ngotak! : "))
-print("WA / SMS")
-jenis = input("Jenis Spam : ")
+nomer = input(f"{K} ∎--> Nomer Target : ")
+jumlah = int(input(f"{K} ∎--> Spam Yang Ngotak! : "))
 # headers
 headers_eci = {
 "Host" : "eci.id",
@@ -161,7 +161,7 @@ for k in range(jumlah):
   if "success" in pos_eci:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{P}--> SELAMAT SMS ECI MASUK",k)
+    print(f"{O}--> SELAMAT SMS ECI MASUK",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
@@ -172,7 +172,7 @@ for k in range(jumlah):
   if "200" in pos_qoala:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{P}--> SMS QOALA MASUK",k)
+    print(f"{O}--> SMS QOALA MASUK",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
@@ -183,7 +183,7 @@ for k in range(jumlah):
   if "__typename" in pos_sayur:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{P}--> SPAM SAYURBOX WA BERHASIL",k)
+    print(f"{O}--> SPAM SAYURBOX WA BERHASIL",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
@@ -194,7 +194,7 @@ for k in range(jumlah):
   if "Send successfully" in pos_carsome:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{P}--> SPAM WA CARSOME BERHASIL",k)
+    print(f"{O}--> SPAM WA CARSOME BERHASIL",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
